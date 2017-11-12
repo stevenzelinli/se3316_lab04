@@ -7,6 +7,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class CoursesComponent implements OnInit {
+  title = "The title of the courses page";
+  courses = ["Course1", "Course2", "Course3"];
 
   constructor() { }
 
