@@ -3,6 +3,7 @@
   courses works!
 </p>
 {{title}}
+<input #newCourse type="text" appAutoGrow/><button type="button" (click)="sendCourse(newCourse.value);newCourse.value = ''">Add Course</button>
 <ul>
     <li *ngFor="let course of courses">
         {{course}}

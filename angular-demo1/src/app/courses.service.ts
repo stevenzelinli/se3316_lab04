@@ -1,11 +1,17 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ElementRef, Renderer } from '@angular/core';
 
 @Injectable()
 export class CoursesService {
+  courseList = ["Course1", "Course2", "Course3"];
+  
   constructor() { }
   
   getCourses() : string[]{
-      return ["Course1", "Course2", "Course3"];
+      return this.courseList;
+  }
+  
+  saveCourse(_course : string){
+    this.courseList.push(_course);
   }
 
 }
